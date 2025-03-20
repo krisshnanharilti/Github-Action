@@ -1,0 +1,16 @@
+name: sample-action
+on: push
+jobs:
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello hi
+        run: echo "hello world"
+  echo-bye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo naming bye
+        run : echo "bye"
+      
+
+       
