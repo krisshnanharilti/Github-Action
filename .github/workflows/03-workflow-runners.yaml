@@ -5,15 +5,16 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: running on ubuntu machine
-          run: echo "i am in ubuntu"
+          run: echo "i am in ubuntu $RUNNER_OS"
     echo-windows:
         runs-on: windows-latest
         steps:
             - name: running on windows machine
               shell: bash
-              run: echo "i am in windows"
+              run: echo "i am in windows $RUNNER_OS"
     echo-mac:
         runs-on: macos-latest
         steps:
         - name: running on mac machine
-          run: echo "i am in mac"
+          run: |
+            echo "i am in mac: $RUNNER_OS"
