@@ -13,8 +13,7 @@ jobs:
     steps:
       - name: failed job
         run: |
-          echo "its failed job"
-          exit 1
+          echo "its  not failed job"
           
     
       - name: echo naming bye
