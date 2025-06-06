@@ -17,4 +17,4 @@ jobs:
         steps:
         - name: running on mac machine
           run: |
-            echo "i am in mac: $RUNNER_OS"
+            echo "i am in mac $RUNNER_OS"
