@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo naming bye
-        run : echo "bye bye"
+        run : echo "byes byes"
       
 
        
