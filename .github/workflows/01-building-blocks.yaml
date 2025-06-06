@@ -11,6 +11,12 @@ jobs:
   echo-bye:
     runs-on: ubuntu-latest
     steps:
+      - name: failed job
+        run: |
+          echo "its failed job"
+          exit 1
+          
+    
       - name: echo naming bye
         run : echo "byes byes"
       
