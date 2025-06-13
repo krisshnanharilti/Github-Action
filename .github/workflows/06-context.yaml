@@ -1,7 +1,7 @@
 name: 06-context 
 run-name: 06- context | debug ${{inputs.debug}}
 on: 
-     push:
+     
      workflow_dispatch:
         inputs:
             debug:
