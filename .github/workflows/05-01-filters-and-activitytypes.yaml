@@ -4,6 +4,8 @@ on:
         types:
             - opened
             - synchronize 
+        branches:
+            - main
 jobs:
     activity-types:
         runs-on: ubuntu-latest
