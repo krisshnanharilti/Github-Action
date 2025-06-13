@@ -1,4 +1,4 @@
-name: using-actions
+name: 04-using-actions
 on: workflow_dispatch
 jobs:
     using-actions:
