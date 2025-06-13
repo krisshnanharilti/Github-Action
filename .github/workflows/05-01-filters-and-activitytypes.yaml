@@ -1,4 +1,4 @@
-name: filters and activity types
+name: 05-01-filters and activity types
 on:
     pull_request:
         types:
