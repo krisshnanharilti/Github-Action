@@ -1,0 +1,11 @@
+name: using-actions
+on: push
+jobs:
+    using-actions:
+        runs-on: ubuntu-latest
+        steps:
+           - name: checkout code
+             uses: actions/checkout@v4
+           - name: print the dirctory
+             run: ls
+
