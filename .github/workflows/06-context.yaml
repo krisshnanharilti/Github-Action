@@ -43,7 +43,7 @@ jobs:
         steps:
             - name: workflow variable
               run: |
-                echo " workflow variable: ${{env.MY_WORKFLOW_VAR}}"
-                echo " workflow variable: ${{env.OVERWRITTEN_VAR}}"
+                echo " workflow variable: $MY_WORKFLOW_VAR "
+                echo " workflow variable: $OVERWRITTEN_VAR "
   
           
