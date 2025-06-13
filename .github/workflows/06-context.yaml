@@ -7,10 +7,15 @@ on:
             debug:
                 type: boolean
                 default: false
-      
+env:
+    MY_WORKFLOW_VAR: "MY WORKFLOW"
+    OVERWRITTEN_VAR: "OVERWRITEN_WORKFLOW" 
 jobs:
     context:
         runs-on: ubuntu-latest
+        env:
+            MY_JOB_VAR: 'JOB VARIABLE'
+            OVERWRITTEN_VAR: 'JOB OVERWRITTEN'
         steps:
             - name: Display Information
               run: |
@@ -24,4 +29,21 @@ jobs:
             - name: Retrive Variable
               run: |
                 echo "Variable values: ${{vars.MY_VAR}}"
+            - name: workflow variable
+              env:
+                OVERWRITTEN_VAR: 'STEPS_VAR'
+              run: |
+                echo " workflow variable: ${{env.OVERWRITTEN_VAR}}"
+            - name: workflow variable
+              run: |
+                echo " workflow variable: ${{env.MY_WORKFLOW_VAR}}"
+                echo " workflow variable: ${{env.OVERWRITTEN_VAR}}"
+    Second-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: workflow variable
+              run: |
+                echo " workflow variable: ${{env.MY_WORKFLOW_VAR}}"
+                echo " workflow variable: ${{env.OVERWRITTEN_VAR}}"
+  
           
