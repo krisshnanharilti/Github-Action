@@ -1,0 +1,11 @@
+name: filters and activity types
+on:
+    pull_request:
+        types:
+            - opened
+            - synchronize 
+jobs:
+    activity-types:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo " Running when PR is opened or synchronised"
