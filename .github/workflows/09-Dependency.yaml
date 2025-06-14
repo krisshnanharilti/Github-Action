@@ -9,28 +9,37 @@ on:
   
 jobs:
     DEV:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-latest 
+
         steps:
             - name: DEV
               run: echo " sucess on dev"
     DEV1:
         runs-on: ubuntu-latest
+        needs:
+            - DEV
         steps:
             - name: DEV
               if: ${{!inputs.test}}
               run: exit 1
     UAT:
         runs-on: ubuntu-latest
+        needs:
+            DEV1
         steps:
             - name: DEV
               run: echo " sucess on UAT"
     UAT1:
         runs-on: ubuntu-latest
+        needs: 
+            - UAT
         steps:
             - name: DEV
               run: echo " sucess on UAT1"
     PROD:
         runs-on: ubuntu-latest
+        needs: 
+            - UAT1
         steps:
             - name: DEV
               run: echo " sucess on PROD"
