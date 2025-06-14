@@ -24,4 +24,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         -   name: checking the build
-            run: echo "build it"
+            run: echo "build it on $inputs.env"
+        -   name: checking the build
+            run: echo "build it on ${{inputs.env}}"
