@@ -28,3 +28,5 @@ jobs:
               echo "build it on: $inputs.env"
         -   name: checking the build
             run: echo "build it on ${{inputs.env}}"
+        -   name: checking the build
+            run: echo "build it on ${{inputs.version}}"
