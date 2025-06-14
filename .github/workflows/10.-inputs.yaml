@@ -1,0 +1,27 @@
+name: 10-inputs
+on:
+    workflow_dispatch:
+        inputs:
+            dry-run:
+                type: boolean
+                description: check the build
+                default: false
+            env:
+                type: environment
+                required: true
+                description: choose the environment
+            version:
+                type: choice
+                options:
+                    - v1
+                    - v2
+                    - v3
+                description: choose the version
+                default: v3
+
+jobs:
+    input-test:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: checking the build
+            run: echo "build it"
