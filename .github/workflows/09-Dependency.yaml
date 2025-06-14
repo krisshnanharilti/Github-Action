@@ -1,0 +1,36 @@
+name: execution-flow
+on: 
+    workflow_dispatch:
+        inputs:
+            test:
+                type: boolean
+                description: i am passing test aruguments
+                default: false
+  
+jobs:
+    DEV:
+        runs-on: ubuntu-latest
+        steps:
+            - name: DEV
+              run: echo " sucess on dev"
+    DEV1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: DEV
+              if: ${{!inputs.test}}
+              run: exit 1
+    UAT:
+        runs-on: ubuntu-latest
+        steps:
+            - name: DEV
+              run: echo " sucess on UAT"
+    UAT1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: DEV
+              run: echo " sucess on UAT1"
+    PROD:
+        runs-on: ubuntu-latest
+        steps:
+            - name: DEV
+              run: echo " sucess on PROD"
