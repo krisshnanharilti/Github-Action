@@ -1,0 +1,24 @@
+name: 08-functions
+on: 
+    push:
+    workflow_dispatch:
+jobs:
+    functions-usage:
+        runs-on: ubuntu-latest
+        steps:
+            - name: i will execute when sucess
+              if: ${{success()}}
+              run: "sucess"
+            - name: i will execute when sucess
+              if: ${{failure()}}
+              run: "sucess"
+            - name: i will execute when sucess
+              if: ${{cancelled()}}
+              run: "sucess"
+            - name: i will execute when sucess
+              if: ${{!cancelled()}}
+              run: "sucess"
+            - name: i will execute when sucess
+              if: ${{always()}}
+              run: "sucess"
+             
