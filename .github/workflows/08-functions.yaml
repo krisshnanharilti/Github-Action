@@ -8,17 +8,17 @@ jobs:
         steps:
             - name: i will execute when sucess
               if: ${{success()}}
-              run: "sucess"
+              run: echo "sucess"
             - name: i will execute when sucess
               if: ${{failure()}}
-              run: "sucess"
+              run: echo "sucess"
             - name: i will execute when sucess
               if: ${{cancelled()}}
-              run: "sucess"
+              run: echo "sucess"
             - name: i will execute when sucess
               if: ${{!cancelled()}}
-              run: "sucess"
+              run: echo "sucess"
             - name: i will execute when sucess
               if: ${{always()}}
-              run: "sucess"
+              run: echo "sucess"
              
